@@ -1,27 +1,22 @@
 /* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE EQUIPE E CONTATO (equipe.html) === */
 
-/* --- Seção da Equipe --- */
 .team-section {
   background-color: var(--cor-branco);
 }
-
 .team-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   justify-items: center;
 }
-
 .team-member {
   text-align: center;
 }
-
 .team-member img {
   width: 150px;
   height: 150px;
@@ -30,31 +25,25 @@
   margin-bottom: 1rem;
   border: 4px solid var(--cor-borda);
 }
-
 .team-member h3 {
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
 }
-
 .team-member p {
   font-size: 0.9rem;
   color: var(--cor-texto-claro);
 }
 
-/* --- Seção de Contato --- */
 .contact-section {
   background-color: var(--cor-fundo);
 }
-
 .contact-section .container {
   max-width: 700px;
 }
-
 .contact-section h2 {
   text-align: center;
   font-size: 2rem;
 }
-
 .contact-section p {
   text-align: center;
   margin-bottom: 2rem;
@@ -63,13 +52,11 @@
 .contact-form .form-group {
   margin-bottom: 1.5rem;
 }
-
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -79,16 +66,26 @@
   font-family: var(--fonte-principal);
   font-size: 1rem;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--cor-secundaria);
-  box-shadow: 0 0 0 2px rgba(0, 168, 150, 0.2);
+  box-shadow: 0 0 0 2px rgba(227, 66, 52, 0.2);
 }
-
 .contact-form button {
   width: 100%;
   padding: 1rem;
   font-size: 1.1rem;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
 }

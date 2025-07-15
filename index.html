@@ -30,6 +30,11 @@
             <li><a href="pages/equipe.html">Equipe e Contato</a></li>
           </ul>
         </nav>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
     </header>
 
@@ -37,7 +42,10 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1>Bem-vindo ao <img src="assets/logo.png" alt="logo" /></h1>
+          <h1>
+            Bem-vindo ao
+            <img class="alpha-lab-banner" src="assets/logo.png" alt="logo" />
+          </h1>
           <p class="subtitle">
             Uma ponte entre conhecimento e inclusão no universo do Transtorno do
             Espectro Autista (TEA).
@@ -119,7 +127,16 @@
     <footer class="footer">
       <div class="container">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
+        <img class="logo-if" src="./assets/if.png" alt="" />
       </div>
     </footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

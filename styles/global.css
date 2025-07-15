@@ -1,15 +1,14 @@
+/* === ESTILOS GLOBAIS === */
 :root {
-  --cor-primaria: #003256;
-  --cor-secundaria: #005a9c;
+  --cor-primaria: #005a9c;
+  --cor-secundaria: #e34234;
   --cor-destaque: #ffc107;
   --cor-sucesso: #28a745;
-
   --cor-fundo: #f8f9fa;
   --cor-texto: #212529;
   --cor-texto-claro: #6c757d;
   --cor-branco: #ffffff;
   --cor-borda: #dee2e6;
-
   --fonte-principal: "Inter", sans-serif;
 }
 
@@ -33,18 +32,15 @@ h3 {
   margin-bottom: 1rem;
   font-weight: 700;
 }
-
 p {
   margin-bottom: 1rem;
   color: var(--cor-texto-claro);
 }
-
 a {
   color: var(--cor-secundaria);
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 a:hover {
   color: var(--cor-primaria);
 }
@@ -56,14 +52,12 @@ a:hover {
   padding: 0 15px;
 }
 
+/* --- NAVBAR --- */
 .navbar {
   background-color: var(--cor-branco);
   padding: 1rem 0;
   border-bottom: 1px solid var(--cor-borda);
   z-index: 1000;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .navbar .container {
@@ -74,7 +68,6 @@ a:hover {
 
 .navbar .logo {
   width: 10rem;
-  padding-top: 1rem;
 }
 
 .navbar nav ul {
@@ -82,19 +75,35 @@ a:hover {
   display: flex;
   gap: 1.5rem;
 }
-
 .navbar nav a {
   font-weight: 600;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
 }
-
 .navbar nav a.active,
 .navbar nav a:hover {
   color: var(--cor-primaria);
   border-bottom-color: var(--cor-secundaria);
 }
 
+/* --- MENU HAMBÚRGUER (escondido em telas grandes) --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-primaria);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- FOOTER --- */
 .footer {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
@@ -102,17 +111,20 @@ a:hover {
   padding: 2rem 0;
   margin-top: 4rem;
 }
-
 .footer p {
   color: var(--cor-branco);
   opacity: 0.8;
   margin: 0;
+}
+.footer .logo-if {
+  width: 8rem;
 }
 
 main section {
   padding: 4rem 0;
 }
 
+/* --- BOTÕES --- */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -121,28 +133,82 @@ main section {
   text-align: center;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 .btn:hover {
   transform: translateY(-2px);
 }
-
 .btn-primary {
   background-color: var(--cor-secundaria);
   color: var(--cor-branco);
 }
-
 .btn-primary:hover {
-  background-color: #007a6b;
+  background-color: #c73426;
   color: var(--cor-branco);
 }
-
 .btn-secondary {
   background-color: transparent;
   color: var(--cor-secundaria);
   border: 2px solid var(--cor-secundaria);
 }
-
 .btn-secondary:hover {
   background-color: var(--cor-secundaria);
   color: var(--cor-branco);
+}
+
+/* === MEDIA QUERIES PARA RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  /* --- AJUSTES GERAIS --- */
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  main section {
+    padding: 2.5rem 0;
+  }
+
+  /* --- NAVBAR PARA CELULAR --- */
+
+  main .hero .container .alpha-lab-banner {
+    width: 16rem;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 70px; /* Altura da navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .navbar nav.active {
+    display: block;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .navbar nav ul li {
+    padding: 0.75rem 0;
+  }
+
+  /* Animação do botão hambúrguer */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* --- FOOTER --- */
+  .footer .container {
+    flex-direction: column;
+  }
 }

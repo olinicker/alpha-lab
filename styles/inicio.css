@@ -1,6 +1,5 @@
 /* === ESTILOS ESPECÍFICOS PARA A PÁGINA INICIAL (index.html) === */
 
-/* --- Seção Hero (Boas-Vindas) --- */
 .hero {
   background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)),
     url("../assets/banner.png") no-repeat center center/cover;
@@ -8,13 +7,11 @@
   text-align: center;
   padding: 6rem 0;
 }
-
 .hero h1 {
   font-size: 3rem;
   color: var(--cor-branco);
   font-weight: 700;
 }
-
 .hero .subtitle {
   font-size: 1.25rem;
   color: var(--cor-branco);
@@ -23,31 +20,25 @@
   margin: 1rem auto 0;
 }
 
-/* --- Seção de Introdução --- */
 .intro-section {
   text-align: center;
   background-color: var(--cor-branco);
 }
-
 .intro-section .container {
   max-width: 800px;
 }
-
 .intro-section h2 {
   font-size: 2rem;
 }
 
-/* --- Seção de Destaques (Highlights) --- */
 .highlights-section {
   background-color: var(--cor-fundo);
 }
-
 .highlights-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -62,59 +53,69 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
-
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
-/* --- Seção de Chamada para Ação (CTA) --- */
 .cta-section {
   background-color: var(--cor-secundaria);
   text-align: center;
   color: var(--cor-branco);
 }
-
 .cta-section h2 {
   color: var(--cor-branco);
   font-size: 2rem;
 }
-
 .cta-section p {
   color: var(--cor-branco);
   opacity: 0.9;
   margin-bottom: 2rem;
 }
-
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
-
-/* Ajustando os botões para a seção CTA */
 .cta-section .btn-primary {
   background-color: var(--cor-branco);
   color: var(--cor-secundaria);
 }
-
 .cta-section .btn-primary:hover {
   background-color: #f0f0f0;
   color: var(--cor-secundaria);
 }
-
 .cta-section .btn-secondary {
   border-color: var(--cor-branco);
   color: var(--cor-branco);
 }
-
 .cta-section .btn-secondary:hover {
   background-color: var(--cor-branco);
   color: var(--cor-secundaria);
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-buttons .btn {
+    width: 80%;
+    max-width: 300px;
+  }
 }

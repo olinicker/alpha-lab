@@ -1,12 +1,10 @@
 /* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE RECURSOS (recursos.html) === */
 
-/* --- Seção de Busca --- */
 .search-section {
   background-color: var(--cor-fundo);
   padding-top: 0;
   padding-bottom: 2rem;
 }
-
 .search-bar {
   display: flex;
   max-width: 700px;
@@ -15,7 +13,6 @@
   border-radius: 8px;
   overflow: hidden;
 }
-
 .search-bar input[type="search"] {
   flex-grow: 1;
   border: none;
@@ -23,26 +20,21 @@
   font-size: 1rem;
   font-family: var(--fonte-principal);
 }
-
 .search-bar input[type="search"]:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--cor-secundaria-transparente);
+  box-shadow: 0 0 0 2px rgba(227, 66, 52, 0.2);
 }
-
 .search-bar .btn {
   border-radius: 0;
   border-left: 1px solid var(--cor-borda);
 }
 
-/* --- Seções de Conteúdo (Publicações e Eventos) --- */
 .publications-section {
   background-color: var(--cor-branco);
 }
-
 .events-section {
   background-color: var(--cor-fundo);
 }
-
 .publications-section h2,
 .events-section h2 {
   text-align: center;
@@ -50,13 +42,11 @@
   margin-bottom: 3rem;
 }
 
-/* --- Grid e Cards de Conteúdo --- */
 .content-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
-
 .content-card {
   background-color: var(--cor-branco);
   border: 1px solid var(--cor-borda);
@@ -65,17 +55,14 @@
   display: flex;
   flex-direction: column;
 }
-
 .content-card h3 {
   font-size: 1.25rem;
   margin-top: 1rem;
 }
-
 .content-card p {
-  flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+  flex-grow: 1;
 }
 
-/* --- Etiquetas de Conteúdo (Tags) --- */
 .content-tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -84,28 +71,41 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  align-self: flex-start; /* Alinha a tag no início do card */
+  align-self: flex-start;
 }
-
 .content-tag {
-  background-color: #cfe2ff; /* Azul claro */
+  background-color: #cfe2ff;
   color: #0c5460;
 }
-
 .content-tag.event {
-  background-color: #f5c6cb; /* Rosa claro */
+  background-color: #f5c6cb;
   color: #721c24;
 }
 
-/* --- Link "Leia mais" --- */
 .read-more {
   font-weight: 600;
   align-self: flex-start;
-  margin-top: auto; /* Empurra para o final do card */
+  margin-top: auto;
+}
+.content-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
-/* --- Botão dentro do card --- */
-.content-card .btn {
-  align-self: flex-start; /* Alinha o botão no início */
-  margin-top: auto; /* Empurra o botão para o final do card */
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+  .search-bar .btn {
+    border-radius: 0 0 8px 8px;
+    border-left: none;
+    border-top: 1px solid var(--cor-borda);
+  }
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-card {
+    padding: 1.5rem;
+  }
 }
