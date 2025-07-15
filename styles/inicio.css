@@ -3,8 +3,7 @@
 /* --- Seção Hero (Boas-Vindas) --- */
 .hero {
   background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)),
-    url("https://placehold.co/1200x400/005f73/FFFFFF?text=AlphaLab+Banner")
-      no-repeat center center/cover;
+    url("../assets/banner.png") no-repeat center center/cover;
   color: var(--cor-branco);
   text-align: center;
   padding: 6rem 0;
