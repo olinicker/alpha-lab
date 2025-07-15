@@ -1,5 +1,3 @@
-/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE RECURSOS (recursos.html) === */
-
 .search-section {
   background-color: var(--cor-fundo);
   padding-top: 0;
@@ -92,7 +90,6 @@
   margin-top: auto;
 }
 
-/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
   .search-bar {
     flex-direction: column;

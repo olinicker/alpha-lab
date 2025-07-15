@@ -1,5 +1,3 @@
-/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE EQUIPE E CONTATO (equipe.html) === */
-
 .team-section {
   background-color: var(--cor-branco);
 }
@@ -78,7 +76,6 @@
   font-size: 1.1rem;
 }
 
-/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));

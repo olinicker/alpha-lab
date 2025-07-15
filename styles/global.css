@@ -1,7 +1,7 @@
 /* === ESTILOS GLOBAIS === */
 :root {
   --cor-primaria: #005a9c;
-  --cor-secundaria: #e34234;
+  --cor-secundaria: #00406e;
   --cor-destaque: #ffc107;
   --cor-sucesso: #28a745;
   --cor-fundo: #f8f9fa;
@@ -68,6 +68,7 @@ a:hover {
 
 .navbar .logo {
   width: 10rem;
+  padding-top: 1rem;
 }
 
 .navbar nav ul {
@@ -105,7 +106,7 @@ a:hover {
 
 /* --- FOOTER --- */
 .footer {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-texto);
   color: var(--cor-branco);
   text-align: center;
   padding: 2rem 0;
@@ -115,6 +116,11 @@ a:hover {
   color: var(--cor-branco);
   opacity: 0.8;
   margin: 0;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer .logo-if {
   width: 8rem;
@@ -141,7 +147,7 @@ main section {
   color: var(--cor-branco);
 }
 .btn-primary:hover {
-  background-color: #c73426;
+  background-color: #002a4a; /* Tom mais escuro do novo azul secundário */
   color: var(--cor-branco);
 }
 .btn-secondary {
@@ -166,12 +172,10 @@ main section {
   main section {
     padding: 2.5rem 0;
   }
-
-  /* --- NAVBAR PARA CELULAR --- */
-
   main .hero .container .alpha-lab-banner {
     width: 16rem;
   }
+  /* --- NAVBAR PARA CELULAR --- */
   .menu-toggle {
     display: flex;
   }
@@ -183,6 +187,7 @@ main section {
     width: 100%;
     background-color: var(--cor-branco);
     border-bottom: 1px solid var(--cor-borda);
+    z-index: 999; /* Garante que o menu fique sobre o conteúdo */
   }
   .navbar nav.active {
     display: block;

@@ -1,5 +1,3 @@
-/* === ESTILOS ESPECÍFICOS PARA A PÁGINA INICIAL (index.html) === */
-
 .hero {
   background: linear-gradient(rgba(0, 95, 115, 0.7), rgba(0, 95, 115, 0.7)),
     url("../assets/banner.png") no-repeat center center/cover;
@@ -99,7 +97,6 @@
   color: var(--cor-secundaria);
 }
 
-/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 0;
