@@ -1,0 +1,91 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE PROJETOS (projetos.html) === */
+
+/* --- Cabeçalho da Página (Genérico para páginas internas) --- */
+.page-header {
+  background-color: var(--cor-primaria);
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--cor-branco);
+}
+
+.page-header h1 {
+  color: var(--cor-branco);
+  font-size: 2.5rem;
+}
+
+.page-header p {
+  color: var(--cor-branco);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+/* --- Seção de Projetos --- */
+.projects-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project-card {
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-content {
+  padding: 2.5rem;
+  position: relative;
+}
+
+.project-card h2 {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+
+.project-card .project-description {
+  margin-bottom: 1.5rem;
+}
+
+.project-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-card ul li {
+  margin-bottom: 0.5rem;
+  color: var(--cor-texto-claro);
+}
+
+.project-card ul li strong {
+  color: var(--cor-texto);
+}
+
+/* --- Status do Projeto --- */
+.project-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-status.active {
+  background-color: #d4edda; /* Verde claro */
+  color: #155724; /* Verde escuro */
+}
+
+.project-status.in-development {
+  background-color: #fff3cd; /* Amarelo claro */
+  color: #856404; /* Amarelo escuro */
+}

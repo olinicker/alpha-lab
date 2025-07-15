@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipe e Contato - AlphaLab</title>
+
+    <!-- 1. Estilos globais -->
+    <link rel="stylesheet" href="../styles/global.css" />
+
+    <!-- 2. Estilos específicos da página de equipe -->
+    <link rel="stylesheet" href="../styles/equipe.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho e Navegação -->
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">AlphaLab</a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/projetos.html">Projetos</a></li>
+            <li><a href="../pages/recursos.html">Recursos e Conteúdo</a></li>
+            <li>
+              <a href="../pages/equipe.html" class="active">Equipe e Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Nossa Equipe e Contato</h1>
+          <p>
+            Conheça os estudantes por trás do AlphaLab e entre em contato
+            conosco.
+          </p>
+        </div>
+      </section>
+
+      <!-- Seção da Equipe -->
+      <section class="team-section">
+        <div class="container">
+          <h2>Os Estudantes por Trás do Projeto</h2>
+          <div class="team-grid">
+            <!-- Membro da Equipe 1 (Exemplo) -->
+            <div class="team-member">
+              <img
+                src="https://placehold.co/150x150/00a896/FFFFFF?text=Foto"
+                alt="Foto de um membro da equipe"
+              />
+              <h3>Nome do Estudante</h3>
+              <p>Curso / Área de Atuação</p>
+            </div>
+            <!-- Membro da Equipe 2 (Exemplo) -->
+            <div class="team-member">
+              <img
+                src="https://placehold.co/150x150/00a896/FFFFFF?text=Foto"
+                alt="Foto de um membro da equipe"
+              />
+              <h3>Nome do Estudante</h3>
+              <p>Curso / Área de Atuação</p>
+            </div>
+            <!-- Membro da Equipe 3 (Exemplo) -->
+            <div class="team-member">
+              <img
+                src="https://placehold.co/150x150/00a896/FFFFFF?text=Foto"
+                alt="Foto de um membro da equipe"
+              />
+              <h3>Nome do Estudante</h3>
+              <p>Curso / Área de Atuação</p>
+            </div>
+            <!-- Adicione mais membros conforme necessário -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Contato (Fale Conosco) -->
+      <section class="contact-section">
+        <div class="container">
+          <h2>Fale Conosco</h2>
+          <p>
+            Tem alguma dúvida, sugestão ou interesse em parcerias? Preencha o
+            formulário abaixo.
+          </p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

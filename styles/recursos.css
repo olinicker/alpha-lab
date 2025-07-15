@@ -1,0 +1,111 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE RECURSOS (recursos.html) === */
+
+/* --- Seção de Busca --- */
+.search-section {
+  background-color: var(--cor-fundo);
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar input[type="search"] {
+  flex-grow: 1;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: var(--fonte-principal);
+}
+
+.search-bar input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--cor-secundaria-transparente);
+}
+
+.search-bar .btn {
+  border-radius: 0;
+  border-left: 1px solid var(--cor-borda);
+}
+
+/* --- Seções de Conteúdo (Publicações e Eventos) --- */
+.publications-section {
+  background-color: var(--cor-branco);
+}
+
+.events-section {
+  background-color: var(--cor-fundo);
+}
+
+.publications-section h2,
+.events-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* --- Grid e Cards de Conteúdo --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.content-card {
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-card h3 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.content-card p {
+  flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+}
+
+/* --- Etiquetas de Conteúdo (Tags) --- */
+.content-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start; /* Alinha a tag no início do card */
+}
+
+.content-tag {
+  background-color: #cfe2ff; /* Azul claro */
+  color: #0c5460;
+}
+
+.content-tag.event {
+  background-color: #f5c6cb; /* Rosa claro */
+  color: #721c24;
+}
+
+/* --- Link "Leia mais" --- */
+.read-more {
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: auto; /* Empurra para o final do card */
+}
+
+/* --- Botão dentro do card --- */
+.content-card .btn {
+  align-self: flex-start; /* Alinha o botão no início */
+  margin-top: auto; /* Empurra o botão para o final do card */
+}

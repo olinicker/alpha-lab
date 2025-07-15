@@ -1,0 +1,154 @@
+/* === ESTILOS GLOBAIS PARA O SITE ALPHALAB === */
+
+/* --- Variáveis de Cor e Fontes --- */
+:root {
+  --cor-primaria: #005f73; /* Azul escuro para logos e títulos */
+  --cor-secundaria: #00a896; /* Verde-azulado para botões e links */
+  --cor-fundo: #f8f9fa; /* Fundo geral do site, um cinza bem claro */
+  --cor-texto: #343a40; /* Cor principal do texto */
+  --cor-texto-claro: #6c757d; /* Cor para textos secundários */
+  --cor-branco: #ffffff;
+  --cor-borda: #dee2e6;
+
+  --fonte-principal: "Inter", sans-serif;
+}
+
+/* --- Reset e Padrões do Corpo --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--cor-texto-claro);
+}
+
+a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--cor-primaria);
+}
+
+/* --- Layout do Container --- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Cabeçalho e Navegação (Navbar) --- */
+.navbar {
+  background-color: var(--cor-branco);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  font-weight: 600;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+  color: var(--cor-primaria);
+  border-bottom-color: var(--cor-secundaria);
+}
+
+/* --- Rodapé --- */
+.footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer p {
+  color: var(--cor-branco);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* --- Estilos de Seção Padrão --- */
+main section {
+  padding: 4rem 0;
+}
+
+/* --- Estilos de Botões --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
+
+.btn-primary:hover {
+  background-color: #007a6b; /* Um tom mais escuro do secundário */
+  color: var(--cor-branco);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  border: 2px solid var(--cor-secundaria);
+}
+
+.btn-secondary:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
