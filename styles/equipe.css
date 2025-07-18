@@ -1,88 +1,113 @@
+.page-header {
+  background-color: var(--cor-secundaria);
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--cor-branco);
+}
+.page-header h1 {
+  color: var(--cor-branco);
+  font-size: 2.8rem;
+}
+.page-header .section-subtitle {
+  color: var(--cor-branco);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 1rem auto 0;
+  font-size: 1.1rem;
+}
+
 .team-section {
-  background-color: var(--cor-branco);
+  background-color: var(--cor-fundo-secao);
+  padding: 5rem 0;
 }
 .team-section h2 {
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 3rem;
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .team-member {
   text-align: center;
+  padding: 2rem;
 }
 .team-member img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
-  border: 4px solid var(--cor-borda);
+  margin-bottom: 1.5rem;
+  border: 5px solid var(--cor-branco);
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease;
+}
+.team-member:hover img {
+  transform: scale(1.05);
 }
 .team-member h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 .team-member p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--cor-texto-claro);
 }
 
 .contact-section {
   background-color: var(--cor-fundo);
+  padding: 5rem 0;
 }
 .contact-section .container {
   max-width: 700px;
 }
 .contact-section h2 {
   text-align: center;
-  font-size: 2rem;
 }
-.contact-section p {
+.contact-section .section-subtitle {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
 .contact-form .form-group {
   margin-bottom: 1.5rem;
 }
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--cor-texto);
 }
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem 1.5rem;
   border: 1px solid var(--cor-borda);
-  border-radius: 8px;
+  border-radius: 12px;
   font-family: var(--fonte-principal);
   font-size: 1rem;
+  background-color: var(--cor-fundo-secao);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--cor-secundaria);
-  box-shadow: 0 0 0 2px rgba(227, 66, 52, 0.2);
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(0, 90, 156, 0.2);
 }
 .contact-form button {
   width: 100%;
   padding: 1rem;
   font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
-  }
-  .team-member img {
-    width: 120px;
-    height: 120px;
+    grid-template-columns: 1fr;
   }
 }

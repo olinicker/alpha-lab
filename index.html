@@ -6,21 +6,20 @@
     <title>AlphaLab - Inclusão e Inovação no TEA</title>
 
     <link rel="stylesheet" href="./styles/global.css" />
-
     <link rel="stylesheet" href="./styles/inicio.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header class="navbar">
       <div class="container">
-        <a href="index.html">
-          <img class="logo" src="./assets/logo.png" alt="" />
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="./assets/logo.png" alt="Logo AlphaLab" />
         </a>
         <nav>
           <ul>
@@ -38,43 +37,58 @@
       </div>
     </header>
 
-    <!-- Seção Principal de Boas-Vindas -->
     <main>
       <section class="hero">
         <div class="container">
-          <h1>
-            Bem-vindo ao
-            <img class="alpha-lab-banner" src="assets/logo.png" alt="logo" />
-          </h1>
-          <p class="subtitle">
-            Uma ponte entre conhecimento e inclusão no universo do Transtorno do
-            Espectro Autista (TEA).
-          </p>
+          <div class="hero-content">
+            <h1>Inovação e Inclusão para o Universo Autista</h1>
+            <p class="subtitle">
+              Recursos, projetos e apoio para educadores, famílias e
+              profissionais da comunidade TEA.
+            </p>
+            <a href="#intro" class="btn btn-primary btn-hero"
+              >Explore Nossas Ações</a
+            >
+          </div>
         </div>
       </section>
 
-      <!-- Seção de Introdução ao TEA -->
-      <section class="intro-section">
+      <section id="intro" class="intro-section">
         <div class="container">
           <h2>O que é o Transtorno do Espectro Autista (TEA)?</h2>
-          <p>
-            O Transtorno do Espectro Autista (TEA) é uma condição de
-            neurodesenvolvimento que afeta a comunicação, a interação social e o
-            comportamento. No AlphaLab, buscamos desmistificar o TEA e oferecer
-            recursos que promovam o desenvolvimento e a inclusão de pessoas no
-            espectro, apoiando educadores, profissionais da saúde e famílias em
-            sua jornada.
+          <p class="section-subtitle">
+            O TEA é uma condição de neurodesenvolvimento que afeta a
+            comunicação, a interação social e o comportamento. No AlphaLab,
+            buscamos desmistificar o TEA e oferecer recursos que promovam o
+            desenvolvimento e a inclusão de pessoas no espectro, apoiando
+            educadores, profissionais da saúde e famílias em sua jornada.
           </p>
         </div>
       </section>
 
-      <!-- Seção de Destaques e Ações -->
       <section class="highlights-section">
         <div class="container">
           <h2>Explore Nossas Ações</h2>
           <div class="highlights-grid">
-            <!-- Card 1: Materiais Pedagógicos -->
             <div class="card">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path
+                    d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                  ></path>
+                </svg>
+              </div>
               <h3>Recursos Pedagógicos</h3>
               <p>
                 Acesse atividades práticas, planos de aula e guias desenvolvidos
@@ -82,8 +96,28 @@
                 inclusivos.
               </p>
             </div>
-            <!-- Card 2: Pesquisas -->
             <div class="card">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
               <h3>Pesquisas e Artigos</h3>
               <p>
                 Mantenha-se atualizado com as últimas publicações sobre
@@ -91,8 +125,26 @@
                 na área do TEA.
               </p>
             </div>
-            <!-- Card 3: Projetos -->
             <div class="card">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 17.265a2.5 2.5 0 0 1 0-4.53L8.25 9.53a2.5 2.5 0 0 1 4.53 0L19 12.735a2.5 2.5 0 1 1-1 1.732l-6.28-3.202a2.5 2.5 0 0 1-4.46 0L2 17.265z"
+                  ></path>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                </svg>
+              </div>
               <h3>Nossos Projetos</h3>
               <p>
                 Conheça iniciativas como a "Caixa de Ferramentas Pedagógicas" e
@@ -103,20 +155,48 @@
         </div>
       </section>
 
-      <!-- Seção de Chamada para Ação (CTA) -->
+      <section class="testimonials-section">
+        <div class="container">
+          <h2>O que Dizem Sobre Nós</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                “Os recursos do AlphaLab transformaram minha sala de aula. As
+                atividades são práticas e realmente engajam os alunos com TEA.”
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Ana M.</span>
+                <span class="author-role">Professora</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                “Encontrei no AlphaLab um apoio fundamental. Os artigos e
+                projetos me ajudaram a entender melhor as necessidades do meu
+                filho.”
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Carlos S.</span>
+                <span class="author-role">Pai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="cta-section">
         <div class="container">
-          <h2>Pronto para Começar?</h2>
+          <h2>Junte-se a Nós na Missão de Incluir</h2>
           <p>
-            Navegue por nosso conteúdo e descubra como o AlphaLab pode ajudar
-            você.
+            Explore nosso conteúdo, participe dos projetos e faça parte desta
+            comunidade.
           </p>
           <div class="cta-buttons">
             <a href="./pages/recursos.html" class="btn btn-primary"
-              >Explorar Recursos e Materiais</a
+              >Explorar Recursos</a
             >
             <a href="./pages/projetos.html" class="btn btn-secondary"
-              >Conheça Nossos Projetos</a
+              >Conhecer Projetos</a
             >
           </div>
         </div>
@@ -124,11 +204,45 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <img
+            class="logo-footer"
+            src="./assets/logo.png"
+            alt="Logo AlphaLab"
+          />
+          <p>
+            Promovendo a inclusão e a inovação no universo do Transtorno do
+            Espectro Autista.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pages/projetos.html">Projetos</a></li>
+            <li><a href="pages/recursos.html">Recursos</a></li>
+            <li><a href="pages/equipe.html">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>contato@alphalab.com</p>
+          <div class="footer-partner">
+            <span>Em parceria com:</span>
+            <img
+              class="logo-if"
+              src="./assets/if.png"
+              alt="Logo do Instituto Federal"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
-        <img class="logo-if" src="./assets/if.png" alt="" />
       </div>
     </footer>
+
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");

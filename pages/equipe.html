@@ -5,26 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equipe e Contato - AlphaLab</title>
 
-    <!-- 1. Estilos globais -->
     <link rel="stylesheet" href="../styles/global.css" />
-
-    <!-- 2. Estilos específicos da página de equipe -->
     <link rel="stylesheet" href="../styles/equipe.css" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Cabeçalho e Navegação -->
     <header class="navbar">
       <div class="container">
-        <a href="index.html">
-          <img class="logo" src="../assets/logo.png" alt="" />
+        <a href="../index.html" class="logo-link">
+          <img class="logo" src="../assets/logo.png" alt="Logo AlphaLab" />
         </a>
         <nav>
           <ul>
@@ -44,28 +39,25 @@
       </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
       <section class="page-header">
         <div class="container">
           <h1>Nossa Equipe e Contato</h1>
-          <p>
+          <p class="section-subtitle">
             Conheça os professores por trás do AlphaLab e entre em contato
             conosco.
           </p>
         </div>
       </section>
 
-      <!-- Seção da Equipe -->
       <section class="team-section">
         <div class="container">
           <h2>Os Professores por Trás dos Projetos</h2>
           <div class="team-grid">
-            <!-- Membro da Equipe 1 (Exemplo) -->
             <div class="team-member">
               <img
                 src="../assets/fotos/emerson.jpg"
-                alt="Foto de um membro da equipe"
+                alt="Foto do professor Emerson Assis de Carvalho"
               />
               <h3>Emerson Assis de Carvalho</h3>
               <p>Doutor / Computação</p>
@@ -73,32 +65,42 @@
             <div class="team-member">
               <img
                 src="../assets/fotos/fabio.png"
-                alt="Foto de um membro da equipe"
+                alt="Foto do professor Fábio Júnior"
               />
               <h3>Fábio Júnior</h3>
               <p>Doutor / Computação</p>
             </div>
-            <!-- Adicione mais membros conforme necessário -->
           </div>
         </div>
       </section>
 
-      <!-- Seção de Contato (Fale Conosco) -->
       <section class="contact-section">
         <div class="container">
           <h2>Fale Conosco</h2>
-          <p>
+          <p class="section-subtitle">
             Tem alguma dúvida, sugestão ou interesse em parcerias? Preencha o
             formulário abaixo.
           </p>
           <form class="contact-form">
             <div class="form-group">
               <label for="name">Nome</label>
-              <input type="text" id="name" name="name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Seu nome completo"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu.email@exemplo.com"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="message">Mensagem</label>
@@ -106,6 +108,7 @@
                 id="message"
                 name="message"
                 rows="6"
+                placeholder="Digite sua mensagem aqui..."
                 required
               ></textarea>
             </div>
@@ -118,11 +121,45 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <img
+            class="logo-footer"
+            src="../assets/logo.png"
+            alt="Logo AlphaLab"
+          />
+          <p>
+            Promovendo a inclusão e a inovação no universo do Transtorno do
+            Espectro Autista.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/projetos.html">Projetos</a></li>
+            <li><a href="../pages/recursos.html">Recursos</a></li>
+            <li><a href="../pages/equipe.html">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>contato@alphalab.com</p>
+          <div class="footer-partner">
+            <span>Em parceria com:</span>
+            <img
+              class="logo-if"
+              src="../assets/if.png"
+              alt="Logo do Instituto Federal"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
-        <img class="logo-if" src="../assets/if.png" alt="" />
       </div>
     </footer>
+
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");

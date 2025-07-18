@@ -5,26 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recursos e Conteúdo - AlphaLab</title>
 
-    <!-- 1. Estilos globais -->
     <link rel="stylesheet" href="../styles/global.css" />
-
-    <!-- 2. Estilos específicos da página de recursos -->
     <link rel="stylesheet" href="../styles/recursos.css" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Cabeçalho e Navegação -->
     <header class="navbar">
       <div class="container">
-        <a href="index.html">
-          <img class="logo" src="../assets/logo.png" alt="" />
+        <a href="../index.html" class="logo-link">
+          <img class="logo" src="../assets/logo.png" alt="Logo AlphaLab" />
         </a>
         <nav>
           <ul>
@@ -46,114 +41,205 @@
       </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
       <section class="page-header">
         <div class="container">
           <h1>Recursos e Conteúdo</h1>
-          <p>
+          <p class="section-subtitle">
             Explore nossas publicações, participe de eventos e encontre
             materiais relevantes sobre o TEA.
           </p>
         </div>
       </section>
 
-      <!-- Ferramenta de Busca -->
       <section class="search-section">
         <div class="container">
-          <form class="search-bar">
+          <form class="search-bar" id="search-form">
             <input
               type="search"
-              placeholder="Pesquisar artigos, eventos, materiais..."
+              id="search-input"
+              placeholder="Pesquisar em artigos, eventos, materiais..."
             />
             <button type="submit" class="btn btn-primary">Buscar</button>
           </form>
         </div>
       </section>
 
-      <!-- Publicações Recentes -->
-      <section class="publications-section">
+      <section class="content-section">
         <div class="container">
           <h2>Publicações Recentes</h2>
-          <div class="content-grid">
-            <!-- Artigo 1 -->
-            <article class="content-card">
-              <span class="content-tag">Artigo</span>
-              <h3>A Importância da Intervenção Precoce no TEA</h3>
-              <p>
-                Um resumo sobre como o diagnóstico e o início das terapias na
-                primeira infância podem impactar positivamente o desenvolvimento
-                da criança.
-              </p>
-              <a href="#" class="read-more">Leia mais &rarr;</a>
-            </article>
-            <!-- Artigo 2 -->
-            <article class="content-card">
-              <span class="content-tag">Artigo</span>
-              <h3>Tecnologias Assistivas como Ferramenta de Inclusão</h3>
-              <p>
-                Análise das principais tecnologias que auxiliam na comunicação e
-                autonomia de pessoas com TEA, desde apps de CAA até recursos de
-                hardware.
-              </p>
-              <a href="#" class="read-more">Leia mais &rarr;</a>
-            </article>
+          <div id="publications-grid" class="content-grid">
+            <p>Carregando publicações...</p>
           </div>
         </div>
       </section>
 
-      <!-- Próximos Eventos -->
-      <section class="events-section">
+      <section class="content-section gray-bg">
         <div class="container">
           <h2>Próximos Eventos</h2>
-          <div class="content-grid">
-            <!-- Evento 1 -->
-            <article class="content-card">
-              <span class="content-tag event">Webinar</span>
-              <h3>Estratégias Inclusivas na Educação</h3>
-              <p>
-                <strong>Data:</strong> 15/08/2024<br /><strong>Formato:</strong>
-                Online e Gratuito
-              </p>
-              <p>
-                Participe deste webinar para aprender estratégias práticas para
-                a inclusão de alunos com TEA em sala de aula regular.
-              </p>
-              <a href="#" class="btn btn-secondary">Inscreva-se</a>
-            </article>
-            <!-- Evento 2 -->
-            <article class="content-card">
-              <span class="content-tag event">Workshop</span>
-              <h3>Materiais Sensoriais para Terapia</h3>
-              <p>
-                <strong>Data:</strong> 05/09/2024<br /><strong>Formato:</strong>
-                Online (Vagas Limitadas)
-              </p>
-              <p>
-                Aprenda a criar e utilizar materiais sensoriais para estimular o
-                desenvolvimento e regular o comportamento em sessões
-                terapêuticas.
-              </p>
-              <a href="#" class="btn btn-secondary">Ver Detalhes</a>
-            </article>
+          <div id="events-grid" class="content-grid">
+            <p>Carregando eventos...</p>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <img
+            class="logo-footer"
+            src="../assets/logo.png"
+            alt="Logo AlphaLab"
+          />
+          <p>
+            Promovendo a inclusão e a inovação no universo do Transtorno do
+            Espectro Autista.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/projetos.html">Projetos</a></li>
+            <li><a href="../pages/recursos.html">Recursos</a></li>
+            <li><a href="../pages/equipe.html">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>contato@alphalab.com</p>
+          <div class="footer-partner">
+            <span>Em parceria com:</span>
+            <img
+              class="logo-if"
+              src="../assets/if.png"
+              alt="Logo do Instituto Federal"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
-        <img class="logo-if" src="../assets/if.png" alt="" />
       </div>
     </footer>
-    <script>
+
+    <script type="module">
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
         menuToggle.classList.toggle("active");
       });
+
+      import * as prismic from "https://cdn.skypack.dev/@prismicio/client";
+
+      const repositoryName = "alphalab";
+      const client = prismic.createClient(repositoryName);
+
+      const publicationsGrid = document.getElementById("publications-grid");
+      const eventsGrid = document.getElementById("events-grid");
+      const searchForm = document.getElementById("search-form");
+      const searchInput = document.getElementById("search-input");
+
+      let allResources = [];
+
+      const renderCard = (item) => {
+        const data = item.data;
+        const isEvent = data.tipo_de_recurso === "Evento";
+        const tagClass = isEvent ? "event" : "article";
+        const linkHTML = isEvent
+          ? `<a href="${
+              data.link_de_destino?.url || "#"
+            }" target="_blank" class="btn btn-secondary">${
+              data.texto_do_link || "Saiba mais"
+            }</a>`
+          : `<a href="${
+              data.link_de_destino?.url || "#"
+            }" target="_blank" class="read-more">${
+              data.texto_do_link || "Leia mais →"
+            }</a>`;
+
+        return `
+          <article class="content-card">
+            <span class="content-tag ${tagClass}">${data.tipo_de_recurso}</span>
+            <h3>${data.titulo || ""}</h3>
+            ${
+              isEvent
+                ? `<div>${prismic.asHTML(data.detalhes_evento) || ""}</div>`
+                : ""
+            }
+            <div>${prismic.asHTML(data.resumo) || ""}</div>
+            ${linkHTML}
+          </article>
+        `;
+      };
+
+      const renderResources = (resourcesToRender) => {
+        const articles = resourcesToRender.filter(
+          (item) => item.data.tipo_de_recurso === "Artigo"
+        );
+        const events = resourcesToRender.filter(
+          (item) => item.data.tipo_de_recurso === "Evento"
+        );
+
+        publicationsGrid.innerHTML =
+          articles.length > 0
+            ? articles.map(renderCard).join("")
+            : "<p>Nenhuma publicação encontrada para este termo.</p>";
+
+        eventsGrid.innerHTML =
+          events.length > 0
+            ? events.map(renderCard).join("")
+            : "<p>Nenhum evento encontrado para este termo.</p>";
+      };
+
+      const filterAndRender = () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        if (!searchTerm) {
+          renderResources(allResources);
+          return;
+        }
+
+        const filteredResources = allResources.filter((item) => {
+          const title = (item.data.titulo || "").toLowerCase();
+          const summary = prismic.asText(item.data.resumo || []).toLowerCase();
+          const details = prismic
+            .asText(item.data.detalhes_evento || [])
+            .toLowerCase();
+          return (
+            title.includes(searchTerm) ||
+            summary.includes(searchTerm) ||
+            details.includes(searchTerm)
+          );
+        });
+
+        renderResources(filteredResources);
+      };
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        filterAndRender();
+      };
+
+      const loadResources = async () => {
+        try {
+          allResources = await client.getAllByType("recurso");
+          renderResources(allResources);
+        } catch (error) {
+          console.error("Falha ao buscar recursos do Prismic:", error);
+          publicationsGrid.innerHTML =
+            "<p>Ocorreu um erro ao carregar o conteúdo.</p>";
+          eventsGrid.innerHTML =
+            "<p>Ocorreu um erro ao carregar o conteúdo.</p>";
+        }
+      };
+
+      searchForm.addEventListener("submit", handleSubmit);
+      searchInput.addEventListener("input", filterAndRender);
+
+      loadResources();
     </script>
   </body>
 </html>

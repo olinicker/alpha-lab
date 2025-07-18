@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nossos Projetos - AlphaLab</title>
 
-    <!-- Estilos globais e da página -->
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/projetos.css" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Cabeçalho e Navegação (continua igual) -->
     <header class="navbar">
       <div class="container">
-        <a href="../index.html">
-          <img class="logo" src="../assets/logo.png" alt="" />
+        <a href="../index.html" class="logo-link">
+          <img class="logo" src="../assets/logo.png" alt="Logo AlphaLab" />
         </a>
         <nav>
           <ul>
@@ -42,37 +39,67 @@
       </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
       <section class="page-header">
         <div class="container">
           <h1>Nossos Projetos</h1>
-          <p>
+          <p class="section-subtitle">
             Iniciativas criadas para gerar impacto positivo e fornecer
             ferramentas práticas para a comunidade TEA.
           </p>
         </div>
       </section>
 
-      <!-- Container preparado para receber os projetos -->
       <section class="projects-section">
         <div class="container" id="projects-container">
-          <p>Carregando projetos...</p>
+          <div class="loading-message">
+            <p>Carregando projetos...</p>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Rodapé (continua igual) -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <img
+            class="logo-footer"
+            src="../assets/logo.png"
+            alt="Logo AlphaLab"
+          />
+          <p>
+            Promovendo a inclusão e a inovação no universo do Transtorno do
+            Espectro Autista.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/projetos.html">Projetos</a></li>
+            <li><a href="../pages/recursos.html">Recursos</a></li>
+            <li><a href="../pages/equipe.html">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p>contato@alphalab.com</p>
+          <div class="footer-partner">
+            <span>Em parceria com:</span>
+            <img
+              class="logo-if"
+              src="../assets/if.png"
+              alt="Logo do Instituto Federal"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
-        <img class="logo-if" src="../assets/if.png" alt="" />
       </div>
     </footer>
 
-    <!-- Usando a abordagem de Módulo (type="module") -->
     <script type="module">
-      // Script do menu hambúrguer
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
       menuToggle.addEventListener("click", () => {
@@ -80,7 +107,6 @@
         menuToggle.classList.toggle("active");
       });
 
-      // --- SCRIPT DO PRISMIC ---
       import * as prismic from "https://cdn.skypack.dev/@prismicio/client";
 
       const repositoryName = "alphalab";
@@ -90,7 +116,6 @@
       const loadProjects = async () => {
         try {
           const projects = await client.getAllByType("projeto");
-          projectsContainer.innerHTML = "";
 
           if (projects.length === 0) {
             projectsContainer.innerHTML =
@@ -98,25 +123,27 @@
             return;
           }
 
+          projectsContainer.innerHTML = "";
+
           projects.forEach((project) => {
             const data = project.data;
             const statusClass = data.status
               ? data.status.toLowerCase().replace(/\s+/g, "-")
               : "em-desenvolvimento";
 
-            // CORREÇÃO: Removido 'prismic.asText()' dos campos de Key Text.
-            // Eles já são strings e não precisam ser convertidos.
             const projectHTML = `
               <article class="project-card">
                 <div class="project-content">
-                  <span class="project-status ${statusClass}">${
+                  <div class="card-header">
+                    <span class="project-status ${statusClass}">${
               data.status || "Em Desenvolvimento"
             }</span>
+                  </div>
                   <h2>${data.titulo || ""}</h2>
                   <div class="project-description">
                     ${prismic.asHTML(data.descricao) || ""}
                   </div>
-                  <ul>
+                  <ul class="project-details">
                     <li>
                       <strong>Objetivo:</strong> ${data.objetivo || ""}
                     </li>
