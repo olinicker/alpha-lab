@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nossos Projetos - AlphaLab</title>
 
-    <!-- 1. Estilos globais (serão criados a seguir) -->
+    <!-- Estilos globais e da página -->
     <link rel="stylesheet" href="../styles/global.css" />
-
-    <!-- 2. Estilos específicos da página de projetos (serão criados a seguir) -->
     <link rel="stylesheet" href="../styles/projetos.css" />
 
     <!-- Google Fonts -->
@@ -20,10 +18,10 @@
     />
   </head>
   <body>
-    <!-- Cabeçalho e Navegação -->
+    <!-- Cabeçalho e Navegação (continua igual) -->
     <header class="navbar">
       <div class="container">
-        <a href="index.html">
+        <a href="../index.html">
           <img class="logo" src="../assets/logo.png" alt="" />
         </a>
         <nav>
@@ -44,7 +42,7 @@
       </div>
     </header>
 
-    <!-- Conteúdo Principal da Página de Projetos -->
+    <!-- Conteúdo Principal -->
     <main>
       <section class="page-header">
         <div class="container">
@@ -56,71 +54,89 @@
         </div>
       </section>
 
+      <!-- Container preparado para receber os projetos -->
       <section class="projects-section">
-        <div class="container">
-          <!-- Projeto 1: Caixa de Ferramentas Pedagógicas -->
-          <article class="project-card">
-            <div class="project-content">
-              <span class="project-status active">Ativo</span>
-              <h2>Caixa de Ferramentas Pedagógicas</h2>
-              <p class="project-description">
-                Um repositório de atividades práticas, planos de aula e recursos
-                adaptados para auxiliar professores e educadores a construir um
-                ambiente de aprendizagem mais inclusivo e eficaz.
-              </p>
-              <ul>
-                <li>
-                  <strong>Objetivo:</strong> Fornecer recursos pedagógicos de
-                  fácil acesso e aplicação.
-                </li>
-                <li>
-                  <strong>Público-alvo:</strong> Professores e educadores.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Projeto 2: ComunicaTEA -->
-          <article class="project-card">
-            <div class="project-content">
-              <span class="project-status in-development"
-                >Em Desenvolvimento</span
-              >
-              <h2>ComunicaTEA</h2>
-              <p class="project-description">
-                Um guia prático e informativo sobre as melhores ferramentas de
-                Comunicação Aumentativa e Alternativa (CAA), com tutoriais e
-                dicas para facilitar a implementação dessas tecnologias.
-              </p>
-              <ul>
-                <li>
-                  <strong>Objetivo:</strong> Disseminar o uso de tecnologias de
-                  CAA para apoiar a comunicação.
-                </li>
-                <li>
-                  <strong>Público-alvo:</strong> Profissionais da saúde e
-                  famílias.
-                </li>
-              </ul>
-            </div>
-          </article>
+        <div class="container" id="projects-container">
+          <p>Carregando projetos...</p>
         </div>
       </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé (continua igual) -->
     <footer class="footer">
       <div class="container">
         <p>&copy; 2024 AlphaLab. Todos os direitos reservados.</p>
+        <img class="logo-if" src="../assets/if.png" alt="" />
       </div>
     </footer>
-    <script>
+
+    <!-- Usando a abordagem de Módulo (type="module") -->
+    <script type="module">
+      // Script do menu hambúrguer
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
       menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
         menuToggle.classList.toggle("active");
       });
+
+      // --- SCRIPT DO PRISMIC ---
+      import * as prismic from "https://cdn.skypack.dev/@prismicio/client";
+
+      const repositoryName = "alphalab";
+      const client = prismic.createClient(repositoryName);
+      const projectsContainer = document.getElementById("projects-container");
+
+      const loadProjects = async () => {
+        try {
+          const projects = await client.getAllByType("projeto");
+          projectsContainer.innerHTML = "";
+
+          if (projects.length === 0) {
+            projectsContainer.innerHTML =
+              "<p>Nenhum projeto encontrado. Verifique se publicou o conteúdo no Prismic.</p>";
+            return;
+          }
+
+          projects.forEach((project) => {
+            const data = project.data;
+            const statusClass = data.status
+              ? data.status.toLowerCase().replace(/\s+/g, "-")
+              : "em-desenvolvimento";
+
+            // CORREÇÃO: Removido 'prismic.asText()' dos campos de Key Text.
+            // Eles já são strings e não precisam ser convertidos.
+            const projectHTML = `
+              <article class="project-card">
+                <div class="project-content">
+                  <span class="project-status ${statusClass}">${
+              data.status || "Em Desenvolvimento"
+            }</span>
+                  <h2>${data.titulo || ""}</h2>
+                  <div class="project-description">
+                    ${prismic.asHTML(data.descricao) || ""}
+                  </div>
+                  <ul>
+                    <li>
+                      <strong>Objetivo:</strong> ${data.objetivo || ""}
+                    </li>
+                    <li>
+                      <strong>Público-alvo:</strong> ${data.publico_alvo || ""}
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            `;
+            projectsContainer.innerHTML += projectHTML;
+          });
+        } catch (error) {
+          console.error("Falha ao buscar projetos do Prismic:", error);
+          projectsContainer.innerHTML =
+            "<p>Ocorreu um erro ao carregar os projetos.</p>";
+        }
+      };
+
+      loadProjects();
     </script>
   </body>
 </html>
